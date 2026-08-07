@@ -17,19 +17,22 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "KS Construction",
     description: "KS Construction is a construction firm based in France.",
+    keywords: ["KS Construction"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <>
-            <Header />
             <html
                 lang="en"
                 className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
             >
-                <body className="min-h-full flex flex-col">{children}</body>
+                <body className="min-h-full flex flex-col">
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </body>
             </html>
-            <Footer />
         </>
     );
 }

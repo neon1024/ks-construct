@@ -7,13 +7,14 @@ import {
     IconAndTextContainer,
     PrimaryFooterContainer,
     SecondaryFooterContainer,
+    StyledFooter,
 } from "./styles";
 
 export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer>
+        <StyledFooter>
             <PrimaryFooterContainer>
                 <Image
                     src={"/logo.png"}
@@ -38,6 +39,6 @@ export default function Footer() {
             <SecondaryFooterContainer>
                 &copy {year} {COMPANY.NAME}
             </SecondaryFooterContainer>
-        </footer>
+        </StyledFooter>
     );
 }
