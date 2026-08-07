@@ -6,11 +6,12 @@ import {
     StyledMessage,
     StyledSubmitButton,
 } from "../components/styles";
+import { sendEmail } from "./actions";
 
 export default function Contact() {
     return (
         <>
-            <StyledForm>
+            <StyledForm action={sendEmail}>
                 <StyledField>
                     <StyledLabel htmlFor="name">Name</StyledLabel>
                     <StyledInput id="name" name="name" type="text" required />
