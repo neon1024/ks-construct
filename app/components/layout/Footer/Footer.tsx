@@ -1,14 +1,15 @@
 import { COMPANY } from "@/constants";
 import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
 import {
     FooterColumn,
+    FooterLogo,
     FooterTitle,
     IconAndTextContainer,
     PrimaryFooterContainer,
     SecondaryFooterContainer,
     StyledFooter,
-} from "./styles";
+    StyledFooterItem,
+} from "../Footer/styles";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -16,28 +17,39 @@ export default function Footer() {
     return (
         <StyledFooter>
             <PrimaryFooterContainer>
-                <Image
-                    src={"/logo.png"}
+                <FooterLogo
+                    src="/logo.png"
                     alt={COMPANY.NAME}
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                 />
+
                 <FooterColumn>
                     <FooterTitle>Location</FooterTitle>
-                    <p>{COMPANY.LOCATION}</p>
+                    <StyledFooterItem>{COMPANY.LOCATION}</StyledFooterItem>
                 </FooterColumn>
+
                 <FooterColumn>
                     <FooterTitle>Contact</FooterTitle>
+
                     <IconAndTextContainer>
-                        <Phone /> {COMPANY.PHONE_NUMBER}
+                        <Phone size={18} />
+                        <StyledFooterItem>
+                            {COMPANY.PHONE_NUMBER}
+                        </StyledFooterItem>
                     </IconAndTextContainer>
+
                     <IconAndTextContainer>
-                        <Mail /> {COMPANY.EMAIL}
+                        <Mail size={18} />
+                        <StyledFooterItem>{COMPANY.EMAIL}</StyledFooterItem>
                     </IconAndTextContainer>
                 </FooterColumn>
             </PrimaryFooterContainer>
+
+            <hr style={{ margin: 0, padding: 0 }} />
+
             <SecondaryFooterContainer>
-                &copy {year} {COMPANY.NAME}
+                &copy; {year} {COMPANY.NAME}
             </SecondaryFooterContainer>
         </StyledFooter>
     );
