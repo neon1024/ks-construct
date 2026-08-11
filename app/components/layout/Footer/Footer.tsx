@@ -10,6 +10,7 @@ import {
     StyledFooter,
     StyledFooterItem,
 } from "../Footer/styles";
+import { formatPhoneNumber } from "./utils";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -35,7 +36,9 @@ export default function Footer() {
                     <IconAndTextContainer>
                         <Phone size={18} />
                         <StyledFooterItem>
-                            {COMPANY.PHONE_NUMBER}
+                            <a href={`tel:${COMPANY.PHONE_NUMBER}`}>
+                                {formatPhoneNumber(COMPANY.PHONE_NUMBER)}
+                            </a>
                         </StyledFooterItem>
                     </IconAndTextContainer>
 
