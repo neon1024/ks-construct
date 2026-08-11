@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -57,6 +58,16 @@ export const IconAndTextContainer = styled.div`
     gap: 0.35rem;
     min-width: 0;
     font-size: clamp(0.7rem, 1.5vw, 1rem);
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    a:hover {
+        color: #fbbf24;
+    }
 `;
 
 export const SecondaryFooterContainer = styled.div`

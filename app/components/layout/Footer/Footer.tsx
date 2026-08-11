@@ -12,6 +12,9 @@ import {
 } from "../Footer/styles";
 import { formatPhoneNumber } from "./utils";
 
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Footer() {
     const year = new Date().getFullYear();
 
@@ -34,17 +37,43 @@ export default function Footer() {
                     <FooterTitle>Contact</FooterTitle>
 
                     <IconAndTextContainer>
-                        <Phone size={18} />
-                        <StyledFooterItem>
-                            <a href={`tel:${COMPANY.PHONE_NUMBER}`}>
+                        <a href={`tel:${COMPANY.PHONE_NUMBER}`}>
+                            <Phone size={18} />
+                            <StyledFooterItem>
                                 {formatPhoneNumber(COMPANY.PHONE_NUMBER)}
-                            </a>
-                        </StyledFooterItem>
+                            </StyledFooterItem>
+                        </a>
                     </IconAndTextContainer>
 
                     <IconAndTextContainer>
                         <Mail size={18} />
                         <StyledFooterItem>{COMPANY.EMAIL}</StyledFooterItem>
+                    </IconAndTextContainer>
+
+                    <IconAndTextContainer>
+                        <a href={COMPANY.SOCIALS.FACEBOOK} target="_blank">
+                            <FontAwesomeIcon
+                                icon={faFacebook}
+                                style={{
+                                    width: 18,
+                                    height: 18,
+                                }}
+                            />
+                            <StyledFooterItem>{COMPANY.NAME}</StyledFooterItem>
+                        </a>
+                    </IconAndTextContainer>
+
+                    <IconAndTextContainer>
+                        <a href={COMPANY.SOCIALS.INSTAGRAM} target="_blank">
+                            <FontAwesomeIcon
+                                icon={faInstagram}
+                                style={{
+                                    width: 18,
+                                    height: 18,
+                                }}
+                            />
+                            <StyledFooterItem>{COMPANY.NAME}</StyledFooterItem>
+                        </a>
                     </IconAndTextContainer>
                 </FooterColumn>
             </PrimaryFooterContainer>
