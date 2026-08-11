@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "KS Construction",
-    description: "KS Construction is a construction firm based in France.",
-    keywords: ["KS Construction"],
+    title: "KS Construct",
+    description: "KS Construct is a construction firm based in France.",
+    keywords: ["KS Construct"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
