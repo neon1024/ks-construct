@@ -69,7 +69,7 @@ export const HeroEyebrow = styled.p`
 
     margin: 0 0 22px;
 
-    color: #f59e0b;
+    color: #9b8351;
 
     font-size: 12px;
     font-weight: 800;
@@ -81,7 +81,7 @@ export const HeroEyebrow = styled.p`
         width: 32px;
         height: 2px;
 
-        background: #f59e0b;
+        background: #9b8351;
     }
 `;
 
@@ -98,7 +98,7 @@ export const HeroTitle = styled.h1`
     font-weight: 750;
 
     span {
-        color: #f59e0b;
+        color: #9b8351;
     }
 `;
 
@@ -138,7 +138,7 @@ export const PrimaryButton = styled(Link)`
 
     border-radius: 7px;
 
-    background: #f59e0b;
+    background: #9b8351;
     color: #111827;
 
     font-size: 15px;
@@ -151,7 +151,7 @@ export const PrimaryButton = styled(Link)`
         background 0.2s ease;
 
     &:hover {
-        background: #fbbf24;
+        background: #9b8351;
 
         transform: translateY(-2px);
     }

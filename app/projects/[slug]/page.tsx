@@ -5,8 +5,16 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/data/projects";
 import ProjectGallery from "../ProjectGallery";
 
+import { COMPANY } from "@/constants";
+
 import {
     BackLink,
+    ContactCTA,
+    ContactCTAButton,
+    ContactCTAContent,
+    ContactCTAEyebrow,
+    ContactCTAText,
+    ContactCTATitle,
     Cover,
     DetailCategory,
     DetailContainer,
@@ -39,7 +47,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
     }
 
     return {
-        title: `${project.title} | KS Construct`,
+        title: `${project.title} | ${COMPANY.NAME}`,
         description: project.description,
     };
 }
@@ -56,10 +64,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return (
         <Page>
             <DetailContainer>
-                <Link href="/projects" passHref>
-                    <BackLink>← Toutes les réalisations</BackLink>
-                </Link>
-
+                <BackLink href="/projects">← Toutes les réalisations</BackLink>
                 <DetailHeader>
                     <DetailCategory>{project.category}</DetailCategory>
 
@@ -69,7 +74,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                     <DetailDescription>{project.description}</DetailDescription>
                 </DetailHeader>
-
                 <Cover>
                     <Image
                         src={project.cover}
@@ -79,12 +83,29 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         sizes="100vw"
                     />
                 </Cover>
-
                 <ProjectGallery title="Avant" images={project.before} />
-
                 <ProjectGallery title="En cours" images={project.progress} />
-
                 <ProjectGallery title="Après" images={project.after} />
+
+                <ContactCTA>
+                    <ContactCTAContent>
+                        <ContactCTAEyebrow>Votre projet</ContactCTAEyebrow>
+
+                        <ContactCTATitle>
+                            Vous avez un projet en tête ?
+                        </ContactCTATitle>
+
+                        <ContactCTAText>
+                            Contactez-nous pour discuter de votre projet et
+                            découvrir comment KS Construct peut vous
+                            accompagner.
+                        </ContactCTAText>
+                    </ContactCTAContent>
+
+                    <ContactCTAButton href="/contact">
+                        Nous contacter <span>→</span>
+                    </ContactCTAButton>
+                </ContactCTA>
             </DetailContainer>
         </Page>
     );
