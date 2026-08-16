@@ -7,7 +7,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
         },
         {
-            url: "https://www.ks-construct.fr/",
+            url: "https://www.ks-construct.fr/contact",
+            lastModified: new Date(),
+        },
+        {
+            url: "https://www.ks-construct.fr/projects",
+            lastModified: new Date(),
+        },
+        {
+            url: "https://www.ks-construct.fr/projects/isolation-exterieure",
             lastModified: new Date(),
         },
     ];

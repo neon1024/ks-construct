@@ -31,18 +31,6 @@ export default function ProjectsPage() {
     return (
         <Page>
             <Hero>
-                {/* <Image
-                    src="/images/projects/hero.jpg"
-                    alt=""
-                    fill
-                    priority
-                    sizes="100vw"
-                    style={{
-                        objectFit: "cover",
-                        opacity: 0.35,
-                    }}
-                /> */}
-
                 <HeroContent>
                     <Eyebrow>Nos réalisations</Eyebrow>
 
