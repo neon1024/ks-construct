@@ -10,10 +10,11 @@ import {
     StyledFooter,
     StyledFooterItem,
 } from "../Footer/styles";
-import { formatPhoneNumber } from "./utils";
 
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { formatPhoneNumber } from "@/utils/utils";
 
 export default function Footer() {
     const year = new Date().getFullYear();
