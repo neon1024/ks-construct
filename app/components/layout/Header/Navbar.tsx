@@ -13,7 +13,7 @@ export default function Navbar() {
         <HeaderContainer>
             <PrimaryHeaderContainer>
                 <Logo
-                    src="/logo.png"
+                    src="/images/logo.png"
                     alt={COMPANY.NAME}
                     width={80}
                     height={80}
