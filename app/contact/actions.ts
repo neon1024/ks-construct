@@ -8,6 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function sendEmail(formData: FormData) {
     const name = formData.get("name");
     const email = formData.get("email");
+    const phone = formData.get("phone");
     const message = formData.get("message");
 
     if (name && email && message) {
@@ -19,6 +20,7 @@ export async function sendEmail(formData: FormData) {
             text: `
         Name: ${name}
         Email: ${email}        
+        ${phone ? "Phone: " + phone : ""}
         Message: ${message}
         `,
         });
