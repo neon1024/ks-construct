@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { getProjectBySlug, projects } from "@/data/projects";
-import ProjectGallery from "../ProjectGallery";
+import ProjectGallery from "./components/ProjectGallery";
 
 import { COMPANY } from "@/constants";
 
