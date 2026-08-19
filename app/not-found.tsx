@@ -1,3 +1,11 @@
-export default function Loading() {
-    return <>Not Found</>;
+"use client";
+
+import NotFound from "@/components/NotFound/NotFound";
+
+export default function NotFoundPage() {
+    return (
+        <>
+            <NotFound />
+        </>
+    );
 }
