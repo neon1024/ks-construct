@@ -15,13 +15,6 @@ export const HeroContainer = styled.section`
     background: #0b1220;
 `;
 
-export const HeroImage = styled(Image)`
-    z-index: 0;
-
-    object-fit: cover;
-    object-position: center;
-`;
-
 export const HeroOverlay = styled.div`
     position: absolute;
     inset: 0;

@@ -9,7 +9,7 @@ import {
     SecondaryFooterContainer,
     StyledFooter,
     StyledFooterItem,
-} from "../Footer/styles";
+} from "./styles";
 
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

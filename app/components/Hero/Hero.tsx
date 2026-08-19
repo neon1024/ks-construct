@@ -7,7 +7,6 @@ import {
     HeroContent,
     HeroDescription,
     HeroEyebrow,
-    HeroImage,
     HeroOverlay,
     HeroTitle,
     PrimaryButton,
@@ -17,8 +16,6 @@ import {
 export default function Hero() {
     return (
         <HeroContainer>
-            {/* <HeroImage src="" alt="KS Construct" fill priority sizes="100vw" /> */}
-
             <HeroOverlay />
 
             <HeroContent>
