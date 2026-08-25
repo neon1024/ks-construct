@@ -24,6 +24,7 @@ export default function Navbar() {
 
             <SecondaryHeaderContainer>
                 <Link href="/">Home</Link>
+                <Link href="/projects">Projects</Link>
                 <Link href="/contact">Contact</Link>
             </SecondaryHeaderContainer>
         </HeaderContainer>
