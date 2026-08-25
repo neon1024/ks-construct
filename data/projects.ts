@@ -41,6 +41,34 @@ export const projects: Project[] = [
             "/images/projects/project-1/after4.jpeg",
         ],
     },
+    {
+        slug: "interieure-exterieure-toiture-renovation",
+        title: "Rénovation intérieure, extérieure et de toiture",
+        location: "France",
+        category: "Isolation",
+        description:
+            "Rénovation complète de l'intérieur, de l'extérieur et de la toiture visant à améliorer la performance énergétique et le confort du logement.",
+
+        cover: "/images/projects/project-2/after1.jpg",
+
+        before: [
+            "/images/projects/project-2/before1.jpg",
+            "/images/projects/project-2/before2.jpg",
+        ],
+
+        progress: [
+            "/images/projects/project-2/progress1.jpg",
+            "/images/projects/project-2/progress2.jpg",
+            "/images/projects/project-2/progress3.jpg",
+            "/images/projects/project-2/progress4.jpg",
+        ],
+
+        after: [
+            "/images/projects/project-2/after1.jpg",
+            "/images/projects/project-2/after2.jpg",
+            "/images/projects/project-2/after3.jpg",
+        ],
+    },
 ];
 
 export function getProjectBySlug(slug: string) {
