@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import ProjectCard from "./components/ProjectCard";
 
+import Video from "./components/Video";
 import {
     Eyebrow,
     Hero,
@@ -17,6 +18,7 @@ import {
     ProjectsHeader,
     ProjectsSection,
     ProjectsTitle,
+    VideoContainer,
 } from "./styles";
 
 export const metadata = {
@@ -42,7 +44,6 @@ export default function ProjectsPage() {
                     </HeroText>
                 </HeroContent>
             </Hero>
-
             <Intro>
                 <div>
                     <Eyebrow>Notre savoir-faire</Eyebrow>
@@ -70,6 +71,10 @@ export default function ProjectsPage() {
                     </p>
                 </IntroText>
             </Intro>
+
+            <VideoContainer>
+                <Video />
+            </VideoContainer>
 
             <ProjectsSection>
                 <ProjectsContainer>

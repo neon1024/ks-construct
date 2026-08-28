@@ -96,3 +96,10 @@ export const Category = styled.span`
     letter-spacing: 0.12em;
     text-transform: uppercase;
 `;
+
+export const VideoStyled = styled.video`
+    display: block;
+    width: min(90%, 1080px);
+    height: auto;
+    margin: 0 auto;
+`;

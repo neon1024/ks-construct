@@ -329,3 +329,9 @@ export const ContactCTAButton = styled(Link)`
         transform: translateX(4px);
     }
 `;
+
+export const VideoContainer = styled.div`
+    width: 100%;
+
+    background-color: #0d0d0d;
+`;
