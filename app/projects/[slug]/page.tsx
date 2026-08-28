@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/data/projects";
 import ProjectGallery from "./components/ProjectGallery";
 
-import { COMPANY } from "@/constants";
+import { COMPANY, PATH } from "@/constants";
 
 import {
     BackLink,
@@ -63,7 +63,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return (
         <Page>
             <DetailContainer>
-                <BackLink href="/projects">← Toutes les réalisations</BackLink>
+                <BackLink href={PATH.PROJECTS}>
+                    ← Toutes les réalisations
+                </BackLink>
                 <DetailHeader>
                     <DetailCategory>{project.category}</DetailCategory>
 
@@ -101,7 +103,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         </ContactCTAText>
                     </ContactCTAContent>
 
-                    <ContactCTAButton href="/contact">
+                    <ContactCTAButton href={PATH.CONTACT}>
                         Nous contacter <span>→</span>
                     </ContactCTAButton>
                 </ContactCTA>

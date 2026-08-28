@@ -46,7 +46,7 @@ export const SecondaryHeaderContainer = styled.nav`
 `;
 
 export const LinkStyled = styled(Link)<{ $isActive?: boolean }>`
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -62,8 +62,8 @@ export const LinkStyled = styled(Link)<{ $isActive?: boolean }>`
     border-radius: clamp(3px, 1vw, 4px);
 
     transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+        background-color 0.3s ease,
+        color 0.3s ease;
 
     ${({ $isActive }) =>
         $isActive &&

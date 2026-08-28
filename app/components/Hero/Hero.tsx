@@ -1,5 +1,6 @@
 "use client";
 
+import { PATH } from "@/constants";
 import { ArrowRight } from "lucide-react";
 import {
     HeroActions,
@@ -33,12 +34,12 @@ export default function Hero() {
                 </HeroDescription>
 
                 <HeroActions>
-                    <PrimaryButton href="/contact">
+                    <PrimaryButton href={PATH.CONTACT}>
                         Request a quote
                         <ArrowRight size={18} />
                     </PrimaryButton>
 
-                    <SecondaryButton href="/projects">
+                    <SecondaryButton href={PATH.PROJECTS}>
                         View our projects
                     </SecondaryButton>
                 </HeroActions>

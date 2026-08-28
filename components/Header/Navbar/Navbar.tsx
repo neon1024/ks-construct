@@ -1,6 +1,6 @@
 "use client";
 
-import { COMPANY } from "@/constants";
+import { COMPANY, PATH } from "@/constants";
 import { usePathname } from "next/navigation";
 import {
     HeaderContainer,
@@ -28,16 +28,19 @@ export default function Navbar() {
             </PrimaryHeaderContainer>
 
             <SecondaryHeaderContainer>
-                <LinkStyled href="/" $isActive={pathname === "/"}>
+                <LinkStyled href={PATH.HOME} $isActive={pathname === PATH.HOME}>
                     Home
                 </LinkStyled>
                 <LinkStyled
-                    href="/projects"
-                    $isActive={pathname === "/projects"}
+                    href={PATH.PROJECTS}
+                    $isActive={pathname === PATH.PROJECTS}
                 >
                     Projects
                 </LinkStyled>
-                <LinkStyled href="/contact" $isActive={pathname === "/contact"}>
+                <LinkStyled
+                    href={PATH.CONTACT}
+                    $isActive={pathname === PATH.CONTACT}
+                >
                     Contact
                 </LinkStyled>
             </SecondaryHeaderContainer>

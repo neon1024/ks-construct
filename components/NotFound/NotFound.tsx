@@ -1,3 +1,4 @@
+import { PATH } from "@/constants";
 import {
     AccentLine,
     BackgroundNumber,
@@ -30,7 +31,7 @@ export default function NotFound() {
                     is temporarily unavailable.
                 </Description>
 
-                <HomeButton href="/">
+                <HomeButton href={PATH.HOME}>
                     <span>Back to home</span>
                     <span>→</span>
                 </HomeButton>

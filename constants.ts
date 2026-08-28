@@ -1,3 +1,9 @@
+export const PATH = {
+    HOME: "/",
+    CONTACT: "/contact",
+    PROJECTS: "/projects",
+};
+
 export const COMPANY = {
     NAME: "KS Construct",
     LOCATION: "Impasse de la Cour Verte 60123 Éméville, France",
