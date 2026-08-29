@@ -69,6 +69,34 @@ export const projects: Project[] = [
             "/images/projects/project-2/after3.jpg",
         ],
     },
+    {
+        slug: "toiture-renovation",
+        title: "Rénovation de toiture",
+        location: "France",
+        category: "Renovation",
+        description:
+            "Rénovation complète de la toiture visant à améliorer l'efficacité énergétique, le confort thermique et la protection à long terme du bâtiment. Le projet comprenait la modernisation de la charpente et de l'isolation, ainsi que l'amélioration de la durabilité et de la résistance aux intempéries du bâtiment.",
+
+        cover: "/images/projects/project-3/progress3.jpg",
+
+        before: [
+            "/images/projects/project-3/before1.jpg",
+            "/images/projects/project-3/before2.jpg",
+        ],
+
+        progress: [
+            "/images/projects/project-3/progress1.jpg",
+            "/images/projects/project-3/progress2.jpg",
+            "/images/projects/project-3/progress3.jpg",
+            "/images/projects/project-3/progress4.jpg",
+        ],
+
+        after: [
+            "/images/projects/project-3/after1.jpg",
+            "/images/projects/project-3/after2.jpg",
+            "/images/projects/project-3/after3.jpg",
+        ],
+    },
 ];
 
 export function getProjectBySlug(slug: string) {
