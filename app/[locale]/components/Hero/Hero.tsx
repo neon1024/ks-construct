@@ -14,7 +14,7 @@ import {
     SecondaryButton,
 } from "./styles";
 
-export default function Hero() {
+export default async function Hero() {
     return (
         <HeroContainer>
             <HeroOverlay />

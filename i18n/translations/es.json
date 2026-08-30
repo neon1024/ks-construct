@@ -1,0 +1,13 @@
+{
+    "navigation": {
+        "header": {
+            "home": "Inicio",
+            "projects": "Proyectos",
+            "contact": "Contacto"
+        },
+        "footer": {
+            "location": "Ubicación",
+            "contact": "Contacto"
+        }
+    }
+}
