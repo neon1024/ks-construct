@@ -1,6 +1,8 @@
 "use client";
 
 import { COMPANY, PATH } from "@/constants";
+import useAppContext from "@/contexts/AppContext";
+import getLocalizedPath from "@/i18n/getLocalizedPath";
 import { usePathname } from "next/navigation";
 import {
     HeaderContainer,
@@ -12,7 +14,23 @@ import {
 } from "./styles";
 
 export default function Navbar() {
+    const { locale, translations } = useAppContext();
     const pathname = usePathname();
+
+    const navigationItems = [
+        {
+            label: translations?.navigation.header.home,
+            path: getLocalizedPath(locale!, PATH.HOME),
+        },
+        {
+            label: translations?.navigation.header.projects,
+            path: getLocalizedPath(locale!, PATH.PROJECTS),
+        },
+        {
+            label: translations?.navigation.header.contact,
+            path: getLocalizedPath(locale!, PATH.CONTACT),
+        },
+    ];
 
     return (
         <HeaderContainer>
@@ -28,21 +46,15 @@ export default function Navbar() {
             </PrimaryHeaderContainer>
 
             <SecondaryHeaderContainer>
-                <LinkStyled href={PATH.HOME} $isActive={pathname === PATH.HOME}>
-                    Home
-                </LinkStyled>
-                <LinkStyled
-                    href={PATH.PROJECTS}
-                    $isActive={pathname === PATH.PROJECTS}
-                >
-                    Projects
-                </LinkStyled>
-                <LinkStyled
-                    href={PATH.CONTACT}
-                    $isActive={pathname === PATH.CONTACT}
-                >
-                    Contact
-                </LinkStyled>
+                {navigationItems.map((navigationItem) => (
+                    <LinkStyled
+                        key={navigationItem.path}
+                        href={navigationItem.path}
+                        $isActive={pathname === navigationItem.path}
+                    >
+                        {navigationItem.label}
+                    </LinkStyled>
+                ))}
             </SecondaryHeaderContainer>
         </HeaderContainer>
     );

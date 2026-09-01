@@ -2,7 +2,7 @@ export const PATH = {
     HOME: "/",
     CONTACT: "/contact",
     PROJECTS: "/projects",
-};
+} as const;
 
 export const COMPANY = {
     NAME: "KS Construct",
@@ -15,4 +15,4 @@ export const COMPANY = {
         INSTAGRAM:
             "https://www.instagram.com/constructks?igsh=cnR6eDRzMXhqc3hm",
     },
-};
+} as const;

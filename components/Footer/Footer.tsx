@@ -1,3 +1,5 @@
+"use client";
+
 import { COMPANY } from "@/constants";
 import { Mail, Phone } from "lucide-react";
 import {
@@ -14,9 +16,11 @@ import {
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import useAppContext from "@/contexts/AppContext";
 import { formatPhoneNumber } from "@/utils/utils";
 
 export default function Footer() {
+    const { translations } = useAppContext();
     const year = new Date().getFullYear();
 
     return (
@@ -30,12 +34,16 @@ export default function Footer() {
                 />
 
                 <FooterColumn>
-                    <FooterTitle>Location</FooterTitle>
+                    <FooterTitle>
+                        {translations?.navigation.footer.location}
+                    </FooterTitle>
                     <StyledFooterItem>{COMPANY.LOCATION}</StyledFooterItem>
                 </FooterColumn>
 
                 <FooterColumn>
-                    <FooterTitle>Contact</FooterTitle>
+                    <FooterTitle>
+                        {translations?.navigation.footer.contact}
+                    </FooterTitle>
 
                     <IconAndTextContainer>
                         <a href={`tel:${COMPANY.PHONE_NUMBER}`}>
