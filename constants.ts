@@ -16,3 +16,8 @@ export const COMPANY = {
             "https://www.instagram.com/constructks?igsh=cnR6eDRzMXhqc3hm",
     },
 } as const;
+
+export const MEDIA_TYPES = {
+    IMAGE: "image",
+    VIDEO: "video",
+} as const;

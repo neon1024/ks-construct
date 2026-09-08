@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/data/projects";
 import ProjectGallery from "./components/ProjectGallery";
 
-import { COMPANY, PATH } from "@/constants";
+import { COMPANY, MEDIA_TYPES, PATH } from "@/constants";
 
 import {
     BackLink,
@@ -23,6 +23,8 @@ import {
     DetailTitle,
     Page,
 } from "../styles";
+
+import { getMediaType } from "@/utils/utils";
 
 type ProjectPageProps = {
     params: Promise<{
@@ -76,17 +78,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     <DetailDescription>{project.description}</DetailDescription>
                 </DetailHeader>
                 <Cover>
-                    <Image
-                        src={project.cover}
-                        alt={project.title}
-                        fill
-                        priority
-                        sizes="100vw"
-                    />
+                    {getMediaType(project.cover) === MEDIA_TYPES.IMAGE ? (
+                        <Image
+                            src={project.cover}
+                            alt={project.title}
+                            fill
+                            priority
+                            sizes="100vw"
+                        />
+                    ) : (
+                        <video>
+                            <source src={project.cover} type="video/mp4" />
+                        </video>
+                    )}
                 </Cover>
-                <ProjectGallery title="Avant" images={project.before} />
-                <ProjectGallery title="En cours" images={project.progress} />
-                <ProjectGallery title="Après" images={project.after} />
+
+                <ProjectGallery title="Avant" media={project.before} />
+                <ProjectGallery title="En cours" media={project.progress} />
+                <ProjectGallery title="Après" media={project.after} />
 
                 <ContactCTA>
                     <ContactCTAContent>
