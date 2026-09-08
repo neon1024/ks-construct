@@ -45,20 +45,24 @@ export const GalleryItem = styled.button`
     overflow: hidden;
 `;
 
-export const GalleryImage = styled.div`
+export const GalleryMedia = styled.div`
     position: relative;
     aspect-ratio: 4 / 3;
 
     overflow: hidden;
     background: #eee;
 
-    img {
+    img,
+    video {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
 
         transition: transform 0.5s ease;
     }
 
-    ${GalleryItem}:hover & img {
+    ${GalleryItem}:hover & img,
+    ${GalleryItem}:hover & video {
         transform: scale(1.04);
     }
 `;
@@ -92,13 +96,16 @@ export const LightboxContent = styled.div`
     height: min(800px, 85vh);
 `;
 
-export const LightboxImage = styled.div`
+export const LightboxMedia = styled.div`
     position: relative;
 
     width: 100%;
     height: 100%;
 
-    img {
+    img,
+    video {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 `;

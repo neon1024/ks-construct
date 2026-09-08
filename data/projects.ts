@@ -97,6 +97,31 @@ export const projects: Project[] = [
             "/images/projects/project-3/after3.jpg",
         ],
     },
+    {
+        slug: "installation-climatisation",
+        title: "Installation et entretien de climatisation",
+        location: "France",
+        category: "Installation et entretien",
+        description: "Installation et entretien de climatisation",
+
+        cover: "/images/projects/project-4/after1.jpg",
+
+        before: [
+            "/images/projects/project-4/before1.jpeg",
+            "/images/projects/project-4/before2.jpg",
+            "/images/projects/project-4/before3.jpg",
+        ],
+
+        progress: [
+            "/videos/projects/project-4/progress1.mp4",
+            "/videos/projects/project-4/progress2.mp4",
+        ],
+
+        after: [
+            "/images/projects/project-4/after1.jpg",
+            "/images/projects/project-4/after2.jpg",
+        ],
+    },
 ];
 
 export function getProjectBySlug(slug: string) {

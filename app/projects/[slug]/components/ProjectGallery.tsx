@@ -3,15 +3,17 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { MEDIA_TYPES } from "@/constants";
+import { getMediaType } from "@/utils/utils";
 import {
     CloseButton,
     Gallery,
-    GalleryImage,
     GalleryItem,
+    GalleryMedia,
     Lightbox,
     LightboxBackdrop,
     LightboxContent,
-    LightboxImage,
+    LightboxMedia,
     NavigationButton,
     Stage,
     StageTitle,
@@ -19,10 +21,10 @@ import {
 
 type ProjectGalleryProps = {
     title: string;
-    images: string[];
+    media: string[];
 };
 
-export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
+export default function ProjectGallery({ title, media }: ProjectGalleryProps) {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
     const closeLightbox = () => {
@@ -33,7 +35,7 @@ export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
         if (selectedIndex === null) return;
 
         setSelectedIndex(
-            selectedIndex === 0 ? images.length - 1 : selectedIndex - 1,
+            selectedIndex === 0 ? media.length - 1 : selectedIndex - 1,
         );
     };
 
@@ -41,11 +43,11 @@ export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
         if (selectedIndex === null) return;
 
         setSelectedIndex(
-            selectedIndex === images.length - 1 ? 0 : selectedIndex + 1,
+            selectedIndex === media.length - 1 ? 0 : selectedIndex + 1,
         );
     };
 
-    if (!images.length) return null;
+    if (!media.length) return null;
 
     return (
         <>
@@ -53,19 +55,29 @@ export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
                 <StageTitle>{title}</StageTitle>
 
                 <Gallery>
-                    {images.map((image, index) => (
+                    {media.map((content, index) => (
                         <GalleryItem
-                            key={image}
+                            key={content}
                             onClick={() => setSelectedIndex(index)}
                         >
-                            <GalleryImage>
-                                <Image
-                                    src={image}
-                                    alt={`${title} - photo ${index + 1}`}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                            </GalleryImage>
+                            <GalleryMedia>
+                                {getMediaType(content) === MEDIA_TYPES.IMAGE ? (
+                                    <Image
+                                        src={content}
+                                        alt={`${title} - photo ${index + 1}`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                ) : (
+                                    <video
+                                        src={content}
+                                        autoPlay
+                                        playsInline
+                                        muted
+                                        loop
+                                    />
+                                )}
+                            </GalleryMedia>
                         </GalleryItem>
                     ))}
                 </Gallery>
@@ -84,7 +96,7 @@ export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
                             {"X"}
                         </CloseButton>
 
-                        {images.length > 1 && (
+                        {media.length > 1 && (
                             <NavigationButton
                                 type="button"
                                 $position="left"
@@ -95,16 +107,26 @@ export default function ProjectGallery({ title, images }: ProjectGalleryProps) {
                             </NavigationButton>
                         )}
 
-                        <LightboxImage>
-                            <Image
-                                src={images[selectedIndex]}
-                                alt={`${title} - photo ${selectedIndex + 1}`}
-                                fill
-                                sizes="90vw"
-                            />
-                        </LightboxImage>
+                        <LightboxMedia>
+                            {getMediaType(media[selectedIndex]) ===
+                            MEDIA_TYPES.IMAGE ? (
+                                <Image
+                                    src={media[selectedIndex]}
+                                    alt={`${title} - photo ${selectedIndex + 1}`}
+                                    fill
+                                    sizes="90vw"
+                                />
+                            ) : (
+                                <video
+                                    src={media[selectedIndex]}
+                                    autoPlay
+                                    playsInline
+                                    muted
+                                />
+                            )}
+                        </LightboxMedia>
 
-                        {images.length > 1 && (
+                        {media.length > 1 && (
                             <NavigationButton
                                 type="button"
                                 $position="right"
