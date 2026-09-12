@@ -1,108 +1,34 @@
-import { projects } from "@/data/projects";
-import ProjectCard from "./components/ProjectCard";
+import { COMPANY } from "@/constants";
+import ProjectsClient from "./components/ProjectsClient/ProjectsClient";
 
-import Video from "./components/Video";
-import {
-    Eyebrow,
-    Hero,
-    HeroContent,
-    HeroText,
-    HeroTitle,
-    Intro,
-    IntroText,
-    IntroTitle,
-    Page,
-    ProjectsContainer,
-    ProjectsCount,
-    ProjectsGrid,
-    ProjectsHeader,
-    ProjectsSection,
-    ProjectsTitle,
-    VideoContainer,
-} from "./styles";
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
 
-export const metadata = {
-    title: "Nos réalisations | KS Construct",
-    description:
-        "Découvrez les projets réalisés par KS Construct en isolation, rénovation énergétique et amélioration de l'habitat.",
-};
+    const metadata = {
+        fr: {
+            title: `Nos réalisations | ${COMPANY.NAME}`,
+            description:
+                "Découvrez les projets réalisés par KS Construct en isolation, rénovation énergétique et amélioration de l'habitat.",
+        },
+        en: {
+            title: `Our Projects | ${COMPANY.NAME}`,
+            description:
+                "Discover projects completed by KS Construct in insulation, energy renovation, and home improvement.",
+        },
+        es: {
+            title: `Nuestros proyectos | ${COMPANY.NAME}`,
+            description:
+                "Descubra los proyectos realizados por KS Construct en aislamiento, renovación energética y mejora del hogar.",
+        },
+    };
+
+    return metadata[locale as keyof typeof metadata] ?? metadata.fr;
+}
 
 export default function ProjectsPage() {
-    return (
-        <Page>
-            <Hero>
-                <HeroContent>
-                    <Eyebrow>Nos réalisations</Eyebrow>
-
-                    <HeroTitle>
-                        Des projets qui transforment les logements.
-                    </HeroTitle>
-
-                    <HeroText>
-                        Découvrez nos réalisations et suivez chaque projet, de
-                        l'état initial jusqu'au résultat final.
-                    </HeroText>
-                </HeroContent>
-            </Hero>
-            <Intro>
-                <div>
-                    <Eyebrow>Notre savoir-faire</Eyebrow>
-
-                    <IntroTitle>
-                        Avant.
-                        <br />
-                        En cours.
-                        <br />
-                        Après.
-                    </IntroTitle>
-                </div>
-
-                <IntroText>
-                    <p>
-                        Chaque chantier est unique. Découvrez les différentes
-                        étapes de nos réalisations, de la préparation du
-                        chantier aux dernières finitions.
-                    </p>
-
-                    <p>
-                        Notre objectif : proposer des solutions adaptées à
-                        chaque logement et réaliser des travaux soignés et
-                        durables.
-                    </p>
-                </IntroText>
-            </Intro>
-
-            <VideoContainer>
-                <Video />
-            </VideoContainer>
-
-            <ProjectsSection>
-                <ProjectsContainer>
-                    <ProjectsHeader>
-                        <ProjectsTitle>Nos projets</ProjectsTitle>
-
-                        <ProjectsCount>
-                            {projects.length}{" "}
-                            {projects.length === 1
-                                ? "réalisation"
-                                : "réalisations"}
-                        </ProjectsCount>
-                    </ProjectsHeader>
-
-                    <ProjectsGrid>
-                        {projects.map((project) => (
-                            <ProjectCard
-                                key={project.slug}
-                                slug={project.slug}
-                                title={project.title}
-                                location={project.location}
-                                category={project.category}
-                                cover={project.cover}
-                            />
-                        ))}
-                    </ProjectsGrid>
-                </ProjectsContainer>
-            </ProjectsSection>
-        </Page>
-    );
+    return <ProjectsClient />;
 }

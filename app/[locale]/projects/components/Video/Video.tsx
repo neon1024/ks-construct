@@ -1,4 +1,4 @@
-import { VideoStyled } from "./styles";
+import { VideoStyled } from "../ProjectCard/styles";
 
 export default function Video() {
     return (

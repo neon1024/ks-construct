@@ -1,3 +1,5 @@
+"use client";
+
 import {
     ContactInfoContainer,
     ContactInfoItem,
@@ -9,21 +11,27 @@ import {
 } from "./styles";
 
 import { COMPANY } from "@/constants";
+import useAppContext from "@/contexts/AppContext";
 import { formatPhoneNumber } from "@/utils/utils";
 
 export default function ContactInfo() {
+    const { translations } = useAppContext();
+
     return (
         <>
             <ContactInfoContainer>
-                <ContactInfoTitle>Nous contacter</ContactInfoTitle>
+                <ContactInfoTitle>
+                    {translations?.contact.info.title}
+                </ContactInfoTitle>
 
                 <ContactInfoText>
-                    Notre équipe est à votre disposition pour répondre à vos
-                    questions et vous accompagner dans votre projet.
+                    {translations?.contact.info.description}
                 </ContactInfoText>
 
                 <ContactInfoItem>
-                    <ContactInfoLabel>Téléphone</ContactInfoLabel>
+                    <ContactInfoLabel>
+                        {translations?.common.phone}
+                    </ContactInfoLabel>
 
                     <ContactInfoLink href={`tel:${COMPANY.PHONE_NUMBER}`}>
                         {formatPhoneNumber(COMPANY.PHONE_NUMBER)}
@@ -31,7 +39,9 @@ export default function ContactInfo() {
                 </ContactInfoItem>
 
                 <ContactInfoItem>
-                    <ContactInfoLabel>E-mail</ContactInfoLabel>
+                    <ContactInfoLabel>
+                        {translations?.common.mail}
+                    </ContactInfoLabel>
 
                     <ContactInfoLink href={`mailto:${COMPANY.EMAIL}`}>
                         {COMPANY.EMAIL}
@@ -40,10 +50,13 @@ export default function ContactInfo() {
 
                 <ContactInfoItem>
                     <ContactInfoLabel>
-                        Zone d&apos;intervention
+                        {translations?.contact.info.zone}
                     </ContactInfoLabel>
 
-                    <ContactInfoValue>France & Spain</ContactInfoValue>
+                    <ContactInfoValue>
+                        {translations?.common.country.fr} &{" "}
+                        {translations?.common.country.es}
+                    </ContactInfoValue>
                 </ContactInfoItem>
             </ContactInfoContainer>
         </>

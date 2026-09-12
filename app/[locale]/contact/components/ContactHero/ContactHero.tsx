@@ -1,3 +1,6 @@
+"use client";
+
+import useAppContext from "@/contexts/AppContext";
 import {
     ContactEyebrow,
     ContactHeroContainer,
@@ -6,17 +9,19 @@ import {
 } from "./styles";
 
 export default function ContactHero() {
+    const { translations } = useAppContext();
+
     return (
         <>
             <ContactHeroContainer>
-                <ContactEyebrow>CONTACT</ContactEyebrow>
+                <ContactEyebrow>
+                    {translations?.contact.hero.eyebrow}
+                </ContactEyebrow>
 
-                <ContactTitle>Parlons de votre projet.</ContactTitle>
+                <ContactTitle>{translations?.contact.hero.title}</ContactTitle>
 
                 <ContactSubtitle>
-                    Vous avez un projet de construction, de rénovation ou
-                    d&apos;amélioration énergétique ? Contactez-nous et
-                    discutons ensemble de vos besoins.
+                    {translations?.contact.hero.description}
                 </ContactSubtitle>
             </ContactHeroContainer>
         </>

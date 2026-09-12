@@ -1,6 +1,8 @@
 "use client";
 
 import { PATH } from "@/constants";
+import useAppContext from "@/contexts/AppContext";
+import getLocalizedPath from "@/i18n/getLocalizedPath";
 import { ArrowRight } from "lucide-react";
 import {
     HeroActions,
@@ -14,33 +16,44 @@ import {
     SecondaryButton,
 } from "./styles";
 
-export default async function Hero() {
+const ACTION_REQUEST_QUOTE = 0;
+const ACTION_VIEW_PROJECTS = 1;
+
+export default function Hero() {
+    const { locale, translations } = useAppContext();
+
+    const actions = [
+        {
+            label: translations?.home.hero.actions.requestQuote,
+            value: getLocalizedPath(locale!, PATH.CONTACT),
+        },
+        {
+            label: translations?.home.hero.actions.viewProjects,
+            value: getLocalizedPath(locale!, PATH.PROJECTS),
+        },
+    ];
+
     return (
         <HeroContainer>
             <HeroOverlay />
 
             <HeroContent>
-                <HeroEyebrow>CONSTRUCTION & RENOVATION</HeroEyebrow>
+                <HeroEyebrow>{translations?.home.hero.eyebrow}</HeroEyebrow>
 
-                <HeroTitle>
-                    We build spaces
-                    <br />
-                    <span>made to last.</span>
-                </HeroTitle>
+                <HeroTitle>{translations?.home.hero.title}</HeroTitle>
 
                 <HeroDescription>
-                    Quality construction and renovation services, delivered with
-                    precision, reliability and attention to detail.
+                    {translations?.home.hero.description}
                 </HeroDescription>
 
                 <HeroActions>
-                    <PrimaryButton href={PATH.CONTACT}>
-                        Request a quote
+                    <PrimaryButton href={actions[ACTION_REQUEST_QUOTE].value}>
+                        {actions[ACTION_REQUEST_QUOTE].label}
                         <ArrowRight size={18} />
                     </PrimaryButton>
 
-                    <SecondaryButton href={PATH.PROJECTS}>
-                        View our projects
+                    <SecondaryButton href={actions[ACTION_VIEW_PROJECTS].value}>
+                        {actions[ACTION_VIEW_PROJECTS].label}
                     </SecondaryButton>
                 </HeroActions>
             </HeroContent>

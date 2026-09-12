@@ -1,6 +1,7 @@
 "use client";
 
 import { Locale } from "@/i18n/config";
+import { Translations } from "@/i18n/getTranslations";
 import { Context, createContext, ReactNode } from "react";
 
 import { useContext } from "react";
@@ -14,13 +15,6 @@ type AppContextProviderProps = {
 type AppContextType = {
     locale: Locale | null;
     translations: Translations | null;
-};
-
-type Translations = {
-    navigation: {
-        header: { home: string; projects: string; contact: string };
-        footer: { location: string; contact: string };
-    };
 };
 
 const defaultValue: AppContextType = {

@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import getLocaleOrDefault from "./i18n/getLocale";
 
 export default function proxy(request: NextRequest) {
+    console.log(request.headers.get("accept-language"));
     const pathname = request.nextUrl.pathname;
 
     const firstPathnameSegment = pathname.split("/")[1];

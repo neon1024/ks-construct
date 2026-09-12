@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import useAppContext from "@/contexts/AppContext";
+import getLocalizedPath from "@/i18n/getLocalizedPath";
 import {
     Arrow,
     Card,
@@ -13,7 +15,7 @@ import {
     ImageOverlay,
     Location,
     Title,
-} from "./styles";
+} from "../ProjectCard/styles";
 
 type ProjectCardProps = {
     slug: string;
@@ -30,9 +32,11 @@ export default function ProjectCard({
     category,
     cover,
 }: ProjectCardProps) {
+    const { locale, translations } = useAppContext();
+
     return (
         <Card>
-            <Link href={`/projects/${slug}`}>
+            <Link href={getLocalizedPath(locale!, `/projects/${slug}`)}>
                 <ImageContainer>
                     <CardImage>
                         <Image
@@ -54,7 +58,7 @@ export default function ProjectCard({
                     <Location>{location}</Location>
 
                     <Arrow>
-                        Voir le projet <span>→</span>
+                        {translations?.projects.goto} <span>→</span>
                     </Arrow>
                 </Content>
             </Link>

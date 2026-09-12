@@ -1,3 +1,5 @@
+"use client";
+
 import {
     ContactFormContainer,
     ContactFormSubtitle,
@@ -13,22 +15,28 @@ import {
 import { COMPANY } from "@/constants";
 import { sendEmail } from "../../actions";
 
+import useAppContext from "@/contexts/AppContext";
 import { formatPhoneNumber } from "@/utils/utils";
 
 export default function ContactForm() {
+    const { translations } = useAppContext();
+
     return (
         <>
             <ContactFormContainer>
-                <ContactFormTitle>Envoyez-nous un message</ContactFormTitle>
+                <ContactFormTitle>
+                    {translations?.contact.form.title}
+                </ContactFormTitle>
 
                 <ContactFormSubtitle>
-                    Décrivez-nous votre projet et nous vous recontacterons dans
-                    les meilleurs délais.
+                    {translations?.contact.form.description}
                 </ContactFormSubtitle>
 
                 <StyledForm action={sendEmail}>
                     <StyledField>
-                        <StyledLabel htmlFor="name">Nom</StyledLabel>
+                        <StyledLabel htmlFor="name">
+                            {translations?.common.name}
+                        </StyledLabel>
 
                         <StyledInput
                             id="name"
@@ -40,7 +48,9 @@ export default function ContactForm() {
                     </StyledField>
 
                     <StyledField>
-                        <StyledLabel htmlFor="email">E-mail</StyledLabel>
+                        <StyledLabel htmlFor="email">
+                            {translations?.common.mail}
+                        </StyledLabel>
 
                         <StyledInput
                             id="email"
@@ -52,7 +62,9 @@ export default function ContactForm() {
                     </StyledField>
 
                     <StyledField>
-                        <StyledLabel htmlFor="phone">Téléphone</StyledLabel>
+                        <StyledLabel htmlFor="phone">
+                            {translations?.common.phone}
+                        </StyledLabel>
 
                         <StyledInput
                             id="phone"
@@ -67,19 +79,21 @@ export default function ContactForm() {
 
                     <StyledField>
                         <StyledLabel htmlFor="message">
-                            Votre projet
+                            {translations?.contact.form.message.label}
                         </StyledLabel>
 
                         <StyledMessage
                             id="message"
                             name="message"
-                            placeholder="Décrivez votre projet..."
+                            placeholder={
+                                translations?.contact.form.message.placeholder
+                            }
                             required
                         />
                     </StyledField>
 
                     <StyledSubmitButton type="submit">
-                        Envoyer ma demande
+                        {translations?.contact.form.submit}
                         <span>→</span>
                     </StyledSubmitButton>
                 </StyledForm>

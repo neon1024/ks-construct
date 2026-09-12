@@ -1,4 +1,85 @@
 {
+    "common": {
+        "contact": "Contact",
+        "phone": "Phone",
+        "mail": "Email",
+        "name": "Name",
+        "country": {
+            "fr": "France",
+            "es": "Spain"
+        }
+    },
+
+    "home": {
+        "hero": {
+            "eyebrow": "CONSTRUCTION & RENOVATION",
+            "title": "We create spaces built to last.",
+            "description": "Quality construction and renovation services, combining expertise, reliability, and attention to detail.",
+            "actions": {
+                "requestQuote": "Request a quote",
+                "viewProjects": "View our projects"
+            }
+        }
+    },
+
+    "contact": {
+        "hero": {
+            "eyebrow": "Contact",
+            "title": "Let's talk about your project.",
+            "description": "Do you have a construction, renovation, or energy-efficiency project? Let's discuss your needs and find the right solution for your project."
+        },
+        "info": {
+            "title": "Get in touch",
+            "description": "Our team is available to answer your questions and support you throughout your project.",
+            "zone": "Service area"
+        },
+        "form": {
+            "title": "Send us a message",
+            "description": "Tell us about your project and we'll get back to you as soon as possible.",
+            "message": {
+                "label": "Your project",
+                "placeholder": "Describe your project..."
+            },
+            "submit": "Send my request"
+        }
+    },
+
+    "projects": {
+        "title": "Our Projects",
+        "count": {
+            "singular": "project",
+            "plural": "projects"
+        },
+        "hero": {
+            "eyebrow": "Our Projects",
+            "title": "Projects that transform homes.",
+            "description": "Discover our projects and follow each one from its initial state through to the final result."
+        },
+        "intro": {
+            "eyebrow": "Our Expertise",
+            "title": "Before.\nIn Progress.\nAfter.",
+            "description": {
+                "first": "Every project is unique. Discover the different stages of our work, from site preparation to the final finishing touches.",
+                "second": "Our goal: to provide solutions tailored to each home and deliver high-quality, long-lasting work."
+            }
+        },
+        "goto": "View project",
+        "goback": "All projects",
+        "before": "Before",
+        "progress": "In Progress",
+        "after": "After",
+        "contact": {
+            "cta": {
+                "eyebrow": "Your Project",
+                "title": "Have a project in mind?",
+                "description": "Contact us to discuss your project and discover how KS Construct can support you.",
+                "action": {
+                    "label": "Contact us"
+                }
+            }
+        }
+    },
+
     "navigation": {
         "header": {
             "home": "Home",

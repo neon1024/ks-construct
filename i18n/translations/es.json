@@ -1,4 +1,85 @@
 {
+    "common": {
+        "contact": "Contacto",
+        "phone": "Teléfono",
+        "mail": "Correo electrónico",
+        "name": "Nombre",
+        "country": {
+            "fr": "Francia",
+            "es": "España"
+        }
+    },
+
+    "home": {
+        "hero": {
+            "eyebrow": "CONSTRUCCIÓN Y RENOVACIÓN",
+            "title": "Creamos espacios diseñados para durar.",
+            "description": "Servicios de construcción y renovación de calidad, combinando experiencia, fiabilidad y atención al detalle.",
+            "actions": {
+                "requestQuote": "Solicitar un presupuesto",
+                "viewProjects": "Ver nuestros proyectos"
+            }
+        }
+    },
+
+    "contact": {
+        "hero": {
+            "eyebrow": "Contacto",
+            "title": "Hablemos de su proyecto.",
+            "description": "¿Tiene un proyecto de construcción, renovación o mejora energética? Hablemos de sus necesidades y encontremos juntos la solución adecuada para su proyecto."
+        },
+        "info": {
+            "title": "Contáctenos",
+            "description": "Nuestro equipo está a su disposición para responder a sus preguntas y acompañarle durante todo su proyecto.",
+            "zone": "Zona de intervención"
+        },
+        "form": {
+            "title": "Envíenos un mensaje",
+            "description": "Cuéntenos sobre su proyecto y nos pondremos en contacto con usted lo antes posible.",
+            "message": {
+                "label": "Su proyecto",
+                "placeholder": "Describa su proyecto..."
+            },
+            "submit": "Enviar mi solicitud"
+        }
+    },
+
+    "projects": {
+        "title": "Nuestros proyectos",
+        "count": {
+            "singular": "proyecto",
+            "plural": "proyectos"
+        },
+        "hero": {
+            "eyebrow": "Nuestros proyectos",
+            "title": "Proyectos que transforman hogares.",
+            "description": "Descubra nuestros proyectos y siga cada uno desde su estado inicial hasta el resultado final."
+        },
+        "intro": {
+            "eyebrow": "Nuestra experiencia",
+            "title": "Antes.\nEn proceso.\nDespués.",
+            "description": {
+                "first": "Cada proyecto es único. Descubra las diferentes etapas de nuestros trabajos, desde la preparación de la obra hasta los últimos acabados.",
+                "second": "Nuestro objetivo: ofrecer soluciones adaptadas a cada vivienda y realizar trabajos cuidados y duraderos."
+            }
+        },
+        "goto": "Ver proyecto",
+        "goback": "Todos los proyectos",
+        "before": "Antes",
+        "progress": "En proceso",
+        "after": "Después",
+        "contact": {
+            "cta": {
+                "eyebrow": "Su proyecto",
+                "title": "¿Tiene un proyecto en mente?",
+                "description": "Contáctenos para hablar sobre su proyecto y descubrir cómo KS Construct puede acompañarle.",
+                "action": {
+                    "label": "Contáctenos"
+                }
+            }
+        }
+    },
+
     "navigation": {
         "header": {
             "home": "Inicio",
