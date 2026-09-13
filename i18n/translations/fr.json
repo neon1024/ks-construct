@@ -1,0 +1,94 @@
+{
+    "common": {
+        "contact": "Contact",
+        "phone": "Téléphone",
+        "mail": "E-mail",
+        "name": "Nom",
+        "country": {
+            "fr": "France",
+            "es": "Espagne"
+        }
+    },
+
+    "home": {
+        "hero": {
+            "eyebrow": "CONSTRUCTION & RÉNOVATION",
+            "title": "Nous créons des espaces conçus pour durer.",
+            "description": "Des prestations de construction et de rénovation de qualité, alliant savoir-faire, fiabilité et souci du détail.",
+            "actions": {
+                "requestQuote": "Demander un devis",
+                "viewProjects": "Voir nos réalisations"
+            }
+        }
+    },
+
+    "contact": {
+        "hero": {
+            "eyebrow": "Contact",
+            "title": "Parlons de votre projet.",
+            "description": "Un projet de construction, de rénovation ou d'amélioration énergétique? Parlons de vos besoins et construisons ensemble une solution adaptée à votre projet."
+        },
+        "info": {
+            "title": "Nous contacter",
+            "description": "Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans votre projet.",
+            "zone": "Zone d'intervention"
+        },
+        "form": {
+            "title": "Envoyez-nous un message",
+            "description": "Décrivez-nous votre projet et nous vous recontacterons dans les meilleurs délais.",
+            "message": {
+                "label": "Votre projet",
+                "placeholder": "Décrivez votre projet..."
+            },
+            "submit": "Envoyer ma demande"
+        }
+    },
+
+    "projects": {
+        "title": "Nos réalisations",
+        "count": {
+            "singular": "réalisation",
+            "plural": "réalisations"
+        },
+        "hero": {
+            "eyebrow": "Nos réalisations",
+            "title": "Des projets qui transforment les logements.",
+            "description": "Découvrez nos réalisations et suivez chaque projet, de l'état initial jusqu'au résultat final."
+        },
+        "intro": {
+            "eyebrow": "Notre savoir-faire",
+            "title": "Avant.\nEn cours.\nAprès.",
+            "description": {
+                "first": "Chaque chantier est unique. Découvrez les différentes étapes de nos réalisations, de la préparation du chantier aux dernières finitions.",
+                "second": "Notre objectif : proposer des solutions adaptées à chaque logement et réaliser des travaux soignés et durables."
+            }
+        },
+        "goto": "Voir le projet",
+        "goback": "Toutes les réalisations",
+        "before": "Avant",
+        "progress": "En cours",
+        "after": "Après",
+        "contact": {
+            "cta": {
+                "eyebrow": "Votre projet",
+                "title": "Vous avez un projet en tête ?",
+                "description": "Contactez-nous pour discuter de votre projet et découvrir comment KS Construct peut vous accompagner.",
+                "action": {
+                    "label": "Nous contacter"
+                }
+            }
+        }
+    },
+
+    "navigation": {
+        "header": {
+            "home": "Accueil",
+            "projects": "Projets",
+            "contact": "Contact"
+        },
+        "footer": {
+            "location": "Emplacement",
+            "contact": "Contact"
+        }
+    }
+}
