@@ -2,11 +2,13 @@
 
 import { COMPANY, PATH } from "@/constants";
 import useAppContext from "@/contexts/AppContext";
+import { locales } from "@/i18n/config";
 import getLocalizedPath from "@/i18n/getLocalizedPath";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
     HeaderContainer,
     HeaderTitle,
+    LanguageSelect,
     LinkStyled,
     Logo,
     PrimaryHeaderContainer,
@@ -16,6 +18,7 @@ import {
 export default function Navbar() {
     const { locale, translations } = useAppContext();
     const pathname = usePathname();
+    const router = useRouter();
 
     const navigationItems = [
         {
@@ -32,6 +35,26 @@ export default function Navbar() {
         },
     ];
 
+    const handleLocaleChange = (
+        event: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        const newLocale = event.target.value;
+
+        document.cookie = `locale=${newLocale}; path=/; max-age=31536000; samesite=lax`;
+
+        const pathWithoutLocale =
+            locale === "fr"
+                ? pathname
+                : pathname.replace(`/${locale}`, "") || "/";
+
+        const newPath =
+            newLocale === "fr"
+                ? pathWithoutLocale
+                : `/${newLocale}${pathWithoutLocale}`;
+
+        router.replace(newPath);
+    };
+
     return (
         <HeaderContainer>
             <PrimaryHeaderContainer>
@@ -46,6 +69,17 @@ export default function Navbar() {
             </PrimaryHeaderContainer>
 
             <SecondaryHeaderContainer>
+                <LanguageSelect
+                    value={(locale ?? "") as string}
+                    onChange={handleLocaleChange}
+                >
+                    {locales.map((locale) => (
+                        <option key={locale} value={locale}>
+                            {locale.toUpperCase()}
+                        </option>
+                    ))}
+                </LanguageSelect>
+
                 {navigationItems.map((navigationItem) => (
                     <LinkStyled
                         key={navigationItem.path}
