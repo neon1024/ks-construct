@@ -1,32 +1,30 @@
-import { COMPANY } from "@/constants";
+import { Locale, locales } from "@/i18n/config";
+import getTranslations from "@/i18n/getTranslations";
+import { notFound } from "next/navigation";
 import ProjectsClient from "./components/ProjectsClient/ProjectsClient";
+
+import { PATH } from "@/constants";
+import { getAlternates } from "@/i18n/getAlternates";
+import { Metadata } from "next";
 
 export async function generateMetadata({
     params,
-}: {
-    params: Promise<{ locale: string }>;
-}) {
+}: PageProps<"/[locale]/projects">): Promise<Metadata> {
     const { locale } = await params;
 
-    const metadata = {
-        fr: {
-            title: `Nos réalisations | ${COMPANY.NAME}`,
-            description:
-                "Découvrez les projets réalisés par KS Construct en isolation, rénovation énergétique et amélioration de l'habitat.",
-        },
-        en: {
-            title: `Our Projects | ${COMPANY.NAME}`,
-            description:
-                "Discover projects completed by KS Construct in insulation, energy renovation, and home improvement.",
-        },
-        es: {
-            title: `Nuestros proyectos | ${COMPANY.NAME}`,
-            description:
-                "Descubra los proyectos realizados por KS Construct en aislamiento, renovación energética y mejora del hogar.",
-        },
-    };
+    const typedLocale = locale as Locale;
 
-    return metadata[locale as keyof typeof metadata] ?? metadata.fr;
+    if (!locales.includes(typedLocale)) {
+        notFound();
+    }
+
+    const translations = await getTranslations(typedLocale);
+
+    return {
+        title: translations.projects.title,
+        description: translations.projects.hero.description,
+        alternates: getAlternates(typedLocale, PATH.PROJECTS),
+    };
 }
 
 export default function ProjectsPage() {

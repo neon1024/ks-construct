@@ -24,6 +24,7 @@ export const IntroTitle = styled.h2`
     font-weight: 600;
     line-height: 1.05;
     letter-spacing: -0.035em;
+    white-space: pre-line;
 `;
 
 export const IntroText = styled.div`

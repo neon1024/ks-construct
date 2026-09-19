@@ -5,6 +5,7 @@ export const PATH = {
 } as const;
 
 export const COMPANY = {
+    DOMAIN: "https://www.ks-construct.fr",
     NAME: "KS Construct",
     LOCATION: "Impasse de la Cour Verte 60123 Éméville, France",
     PHONE_NUMBER: "+33784707421",

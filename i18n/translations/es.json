@@ -10,13 +10,71 @@
         }
     },
 
+    "keywords": [
+        "empresa de reformas",
+        "empresa de rehabilitación energética",
+        "empresa de construcción",
+        "trabajos de reforma",
+        "reforma de casas",
+        "reforma de viviendas",
+        "rehabilitación energética",
+        "reforma integral",
+        "reforma interior",
+        "reforma exterior",
+
+        "tejado",
+        "reforma de tejados",
+        "renovación de tejados",
+        "trabajos de tejado",
+        "cubierta",
+        "techador",
+        "empresa de cubiertas",
+        "reparación de tejados",
+        "impermeabilización de tejados",
+        "estructura del tejado",
+
+        "aislamiento",
+        "aislamiento térmico",
+        "aislamiento de tejados",
+        "aislamiento de áticos",
+        "aislamiento de paredes",
+        "aislamiento interior",
+        "aislamiento exterior",
+        "aislamiento de fachadas",
+        "aislamiento térmico exterior",
+
+        "mejora energética",
+        "eficiencia energética",
+        "rehabilitación térmica",
+        "rehabilitación integral",
+        "ahorro energético",
+
+        "aire acondicionado",
+        "instalación de aire acondicionado",
+        "instalación de climatización",
+        "montaje de aire acondicionado",
+        "instalación de aire acondicionado para viviendas",
+        "aire acondicionado para casas",
+        "aire acondicionado reversible",
+        "aire acondicionado reversible para viviendas",
+        "sistema de climatización",
+
+        "profesional de la construcción",
+        "empresa de reformas",
+        "empresa constructora",
+        "construcción de casas",
+        "presupuesto de reforma",
+        "presupuesto de obras",
+        "presupuesto de construcción"
+    ],
+
     "home": {
         "hero": {
-            "eyebrow": "CONSTRUCCIÓN Y RENOVACIÓN",
+            "eyebrow": "CONSTRUCCIÓN Y REFORMAS",
             "title": "Creamos espacios diseñados para durar.",
-            "description": "Servicios de construcción y renovación de calidad, combinando experiencia, fiabilidad y atención al detalle.",
+            "description": "Como empresa de construcción y reformas, KS Construct le acompaña en sus proyectos de reforma, aislamiento, tejados, climatización y mejora energética, con un trabajo de calidad y resultados duraderos.",
             "actions": {
-                "requestQuote": "Solicitar un presupuesto",
+                "requestQuote": "Solicitar presupuesto",
                 "viewProjects": "Ver nuestros proyectos"
             }
         }
@@ -26,21 +84,21 @@
         "hero": {
             "eyebrow": "Contacto",
             "title": "Hablemos de su proyecto.",
-            "description": "¿Tiene un proyecto de construcción, renovación o mejora energética? Hablemos de sus necesidades y encontremos juntos la solución adecuada para su proyecto."
+            "description": "¿Tiene un proyecto de construcción, reforma, aislamiento, tejado o instalación de aire acondicionado? Cuéntenos sus necesidades y encontremos juntos la solución adecuada para su vivienda."
         },
         "info": {
             "title": "Contáctenos",
-            "description": "Nuestro equipo está a su disposición para responder a sus preguntas y acompañarle durante todo su proyecto.",
-            "zone": "Zona de intervención"
+            "description": "Nuestro equipo está a su disposición para acompañarle en sus proyectos de construcción, reforma y mejora energética y responder a todas sus preguntas.",
+            "zone": "Zona de servicio"
         },
         "form": {
-            "title": "Envíenos un mensaje",
-            "description": "Cuéntenos sobre su proyecto y nos pondremos en contacto con usted lo antes posible.",
+            "title": "Solicite su presupuesto",
+            "description": "Cuéntenos su proyecto de construcción, reforma, tejado, aislamiento o climatización. Nos pondremos en contacto con usted lo antes posible.",
             "message": {
                 "label": "Su proyecto",
                 "placeholder": "Describa su proyecto..."
             },
-            "submit": "Enviar mi solicitud"
+            "submit": "Solicitar presupuesto"
         }
     },
 
@@ -52,15 +110,15 @@
         },
         "hero": {
             "eyebrow": "Nuestros proyectos",
-            "title": "Proyectos que transforman hogares.",
-            "description": "Descubra nuestros proyectos y siga cada uno desde su estado inicial hasta el resultado final."
+            "title": "Proyectos de reforma que transforman viviendas.",
+            "description": "Descubra nuestros proyectos de construcción y reforma, desde la preparación inicial de la obra hasta los últimos acabados."
         },
         "intro": {
             "eyebrow": "Nuestra experiencia",
             "title": "Antes.\nEn proceso.\nDespués.",
             "description": {
-                "first": "Cada proyecto es único. Descubra las diferentes etapas de nuestros trabajos, desde la preparación de la obra hasta los últimos acabados.",
-                "second": "Nuestro objetivo: ofrecer soluciones adaptadas a cada vivienda y realizar trabajos cuidados y duraderos."
+                "first": "Cada obra es única. Descubra las diferentes etapas de nuestros trabajos de reforma, desde la preparación de la obra hasta los últimos acabados.",
+                "second": "Nuestro objetivo es ofrecer soluciones adaptadas a cada vivienda y realizar trabajos de reforma, aislamiento y mejora energética de calidad y duraderos."
             }
         },
         "goto": "Ver proyecto",
@@ -72,7 +130,7 @@
             "cta": {
                 "eyebrow": "Su proyecto",
                 "title": "¿Tiene un proyecto en mente?",
-                "description": "Contáctenos para hablar sobre su proyecto y descubrir cómo KS Construct puede acompañarle.",
+                "description": "Contacte con KS Construct para hablar sobre su proyecto de construcción, reforma, aislamiento, tejado o climatización.",
                 "action": {
                     "label": "Contáctenos"
                 }
@@ -87,7 +145,7 @@
             "contact": "Contacto"
         },
         "footer": {
-            "location": "Ubicación",
+            "location": "Zona de servicio",
             "contact": "Contacto"
         }
     }

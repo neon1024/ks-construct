@@ -10,11 +10,68 @@
         }
     },
 
+    "keywords": [
+        "entreprise de rénovation",
+        "entreprise de rénovation énergétique",
+        "entreprise du bâtiment",
+        "travaux de rénovation",
+        "rénovation de maison",
+        "rénovation habitation",
+        "rénovation énergétique",
+        "rénovation complète",
+        "rénovation intérieure",
+        "rénovation extérieure",
+
+        "toiture",
+        "rénovation de toiture",
+        "réfection de toiture",
+        "travaux de toiture",
+        "couverture",
+        "couvreur",
+        "entreprise de couverture",
+        "réparation de toiture",
+        "étanchéité de toiture",
+        "charpente",
+
+        "isolation",
+        "isolation thermique",
+        "isolation de la toiture",
+        "isolation des combles",
+        "isolation des murs",
+        "isolation intérieure",
+        "isolation extérieure",
+        "isolation de façade",
+        "isolation thermique par l'extérieur",
+
+        "amélioration énergétique",
+        "performance énergétique",
+        "rénovation thermique",
+        "rénovation globale",
+        "économie d'énergie",
+
+        "climatisation",
+        "installation de climatisation",
+        "pose de climatisation",
+        "installation climatisation maison",
+        "climatisation maison",
+        "climatisation réversible",
+        "climatisation réversible maison",
+        "système de climatisation",
+
+        "artisan du bâtiment",
+        "artisan rénovation",
+        "entreprise de construction",
+        "construction maison",
+        "devis rénovation",
+        "devis travaux",
+        "devis construction"
+    ],
+
     "home": {
         "hero": {
             "eyebrow": "CONSTRUCTION & RÉNOVATION",
             "title": "Nous créons des espaces conçus pour durer.",
-            "description": "Des prestations de construction et de rénovation de qualité, alliant savoir-faire, fiabilité et souci du détail.",
+            "description": "Entreprise de construction et de rénovation, KS Construct vous accompagne dans vos projets de rénovation, d'isolation, de toiture, de climatisation et d'amélioration énergétique, avec un travail soigné et durable.",
             "actions": {
                 "requestQuote": "Demander un devis",
                 "viewProjects": "Voir nos réalisations"
@@ -26,21 +83,21 @@
         "hero": {
             "eyebrow": "Contact",
             "title": "Parlons de votre projet.",
-            "description": "Un projet de construction, de rénovation ou d'amélioration énergétique? Parlons de vos besoins et construisons ensemble une solution adaptée à votre projet."
+            "description": "Vous avez un projet de construction, de rénovation, d'isolation, de toiture ou d'installation de climatisation ? Parlons de vos besoins et trouvons ensemble une solution adaptée à votre logement."
         },
         "info": {
             "title": "Nous contacter",
-            "description": "Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans votre projet.",
+            "description": "Notre équipe vous accompagne dans vos projets de construction, de rénovation et d'amélioration énergétique et répond à toutes vos questions.",
             "zone": "Zone d'intervention"
         },
         "form": {
-            "title": "Envoyez-nous un message",
-            "description": "Décrivez-nous votre projet et nous vous recontacterons dans les meilleurs délais.",
+            "title": "Demandez votre devis",
+            "description": "Décrivez-nous votre projet de construction, de rénovation, de toiture, d'isolation ou de climatisation. Nous vous recontacterons dans les meilleurs délais.",
             "message": {
                 "label": "Votre projet",
                 "placeholder": "Décrivez votre projet..."
             },
-            "submit": "Envoyer ma demande"
+            "submit": "Demander un devis"
         }
     },
 
@@ -52,15 +109,15 @@
         },
         "hero": {
             "eyebrow": "Nos réalisations",
-            "title": "Des projets qui transforment les logements.",
-            "description": "Découvrez nos réalisations et suivez chaque projet, de l'état initial jusqu'au résultat final."
+            "title": "Des projets de rénovation qui transforment les logements.",
+            "description": "Découvrez nos réalisations de construction et de rénovation, de la préparation du chantier jusqu'aux dernières finitions."
         },
         "intro": {
             "eyebrow": "Notre savoir-faire",
             "title": "Avant.\nEn cours.\nAprès.",
             "description": {
-                "first": "Chaque chantier est unique. Découvrez les différentes étapes de nos réalisations, de la préparation du chantier aux dernières finitions.",
-                "second": "Notre objectif : proposer des solutions adaptées à chaque logement et réaliser des travaux soignés et durables."
+                "first": "Chaque chantier est unique. Découvrez les différentes étapes de nos travaux de rénovation, de la préparation du chantier aux dernières finitions.",
+                "second": "Notre objectif : proposer des solutions adaptées à chaque logement et réaliser des travaux de rénovation, d'isolation et d'amélioration énergétique soignés et durables."
             }
         },
         "goto": "Voir le projet",
@@ -72,7 +129,7 @@
             "cta": {
                 "eyebrow": "Votre projet",
                 "title": "Vous avez un projet en tête ?",
-                "description": "Contactez-nous pour discuter de votre projet et découvrir comment KS Construct peut vous accompagner.",
+                "description": "Contactez KS Construct pour discuter de votre projet de construction, de rénovation, d'isolation, de toiture ou de climatisation.",
                 "action": {
                     "label": "Nous contacter"
                 }
@@ -83,11 +140,11 @@
     "navigation": {
         "header": {
             "home": "Accueil",
-            "projects": "Projets",
+            "projects": "Réalisations",
             "contact": "Contact"
         },
         "footer": {
-            "location": "Emplacement",
+            "location": "Zone d'intervention",
             "contact": "Contact"
         }
     }

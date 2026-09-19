@@ -8,17 +8,45 @@ import getTranslations from "@/i18n/getTranslations";
 
 import { AppContextProvider } from "@/contexts/AppContext";
 
+import { COMPANY, PATH } from "@/constants";
+import { getAlternates } from "@/i18n/getAlternates";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: LayoutProps<"/[locale]">): Promise<Metadata> {
+    const { locale } = await params;
+
+    const typedLocale = locale as Locale;
+
+    if (!locales.includes(typedLocale)) {
+        notFound();
+    }
+
+    const translations = await getTranslations(typedLocale);
+
+    return {
+        title: {
+            default: COMPANY.NAME,
+            template: `%s | ${COMPANY.NAME}`,
+        },
+        description: translations.home.hero.description,
+        keywords: translations.keywords,
+        alternates: getAlternates(typedLocale, PATH.HOME),
+    };
+}
+
 export default async function LocaleLayout({
     children,
     params,
 }: LayoutProps<"/[locale]">) {
     const { locale } = await params;
 
-    if (!locales.includes(locale as Locale)) {
+    const typedLocale = locale as Locale;
+
+    if (!locales.includes(typedLocale)) {
         notFound();
     }
-
-    const typedLocale = locale as Locale;
 
     const translations = await getTranslations(typedLocale);
 

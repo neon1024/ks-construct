@@ -10,11 +10,68 @@
         }
     },
 
+    "keywords": [
+        "renovation company",
+        "energy renovation company",
+        "building company",
+        "renovation work",
+        "house renovation",
+        "home renovation",
+        "energy renovation",
+        "complete renovation",
+        "interior renovation",
+        "exterior renovation",
+
+        "roofing",
+        "roof renovation",
+        "roof replacement",
+        "roofing work",
+        "roofing",
+        "roofer",
+        "roofing company",
+        "roof repair",
+        "roof waterproofing",
+        "roof structure",
+
+        "insulation",
+        "thermal insulation",
+        "roof insulation",
+        "loft insulation",
+        "wall insulation",
+        "interior insulation",
+        "exterior insulation",
+        "facade insulation",
+        "external thermal insulation",
+
+        "energy improvement",
+        "energy efficiency",
+        "thermal renovation",
+        "whole-house renovation",
+        "energy savings",
+
+        "air conditioning",
+        "air conditioning installation",
+        "air conditioning fitting",
+        "home air conditioning installation",
+        "home air conditioning",
+        "reversible air conditioning",
+        "reversible air conditioning for homes",
+        "air conditioning system",
+
+        "building contractor",
+        "renovation contractor",
+        "construction company",
+        "house construction",
+        "renovation quote",
+        "renovation estimate",
+        "construction estimate"
+    ],
+
     "home": {
         "hero": {
             "eyebrow": "CONSTRUCTION & RENOVATION",
             "title": "We create spaces built to last.",
-            "description": "Quality construction and renovation services, combining expertise, reliability, and attention to detail.",
+            "description": "As a construction and renovation company, KS Construct supports your renovation, insulation, roofing, air conditioning and energy improvement projects with quality workmanship and lasting results.",
             "actions": {
                 "requestQuote": "Request a quote",
                 "viewProjects": "View our projects"
@@ -26,53 +83,53 @@
         "hero": {
             "eyebrow": "Contact",
             "title": "Let's talk about your project.",
-            "description": "Do you have a construction, renovation, or energy-efficiency project? Let's discuss your needs and find the right solution for your project."
+            "description": "Do you have a construction, renovation, insulation, roofing or air conditioning installation project? Tell us about your needs and let's find the right solution for your home together."
         },
         "info": {
-            "title": "Get in touch",
-            "description": "Our team is available to answer your questions and support you throughout your project.",
+            "title": "Contact us",
+            "description": "Our team is here to support you with your construction, renovation and energy improvement projects and answer any questions you may have.",
             "zone": "Service area"
         },
         "form": {
-            "title": "Send us a message",
-            "description": "Tell us about your project and we'll get back to you as soon as possible.",
+            "title": "Request your quote",
+            "description": "Tell us about your construction, renovation, roofing, insulation or air conditioning project. We will get back to you as soon as possible.",
             "message": {
                 "label": "Your project",
                 "placeholder": "Describe your project..."
             },
-            "submit": "Send my request"
+            "submit": "Request a quote"
         }
     },
 
     "projects": {
-        "title": "Our Projects",
+        "title": "Our projects",
         "count": {
             "singular": "project",
             "plural": "projects"
         },
         "hero": {
-            "eyebrow": "Our Projects",
-            "title": "Projects that transform homes.",
-            "description": "Discover our projects and follow each one from its initial state through to the final result."
+            "eyebrow": "Our projects",
+            "title": "Renovation projects that transform homes.",
+            "description": "Discover our construction and renovation projects, from the initial preparation to the final finishing touches."
         },
         "intro": {
-            "eyebrow": "Our Expertise",
-            "title": "Before.\nIn Progress.\nAfter.",
+            "eyebrow": "Our expertise",
+            "title": "Before.\nIn progress.\nAfter.",
             "description": {
-                "first": "Every project is unique. Discover the different stages of our work, from site preparation to the final finishing touches.",
-                "second": "Our goal: to provide solutions tailored to each home and deliver high-quality, long-lasting work."
+                "first": "Every project is unique. Discover the different stages of our renovation work, from site preparation to the final finishing touches.",
+                "second": "Our goal is to provide solutions tailored to each home and deliver high-quality, durable renovation, insulation and energy improvement work."
             }
         },
         "goto": "View project",
         "goback": "All projects",
         "before": "Before",
-        "progress": "In Progress",
+        "progress": "In progress",
         "after": "After",
         "contact": {
             "cta": {
-                "eyebrow": "Your Project",
+                "eyebrow": "Your project",
                 "title": "Have a project in mind?",
-                "description": "Contact us to discuss your project and discover how KS Construct can support you.",
+                "description": "Contact KS Construct to discuss your construction, renovation, insulation, roofing or air conditioning project.",
                 "action": {
                     "label": "Contact us"
                 }
@@ -87,7 +144,7 @@
             "contact": "Contact"
         },
         "footer": {
-            "location": "Location",
+            "location": "Service area",
             "contact": "Contact"
         }
     }
