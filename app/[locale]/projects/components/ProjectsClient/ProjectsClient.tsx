@@ -17,10 +17,14 @@ import {
 
 import { PageContainer } from "../../styles";
 
-import { projects } from "@/data/projects";
+import { Project, projectsData } from "@/data/projects";
 
 export default function ProjectsClient() {
     const { translations } = useAppContext();
+
+    const sortedProjectsByOrder = [...projectsData].sort(
+        (a: Project, b: Project) => a.order - b.order,
+    );
 
     return (
         <PageContainer>
@@ -40,15 +44,15 @@ export default function ProjectsClient() {
                         </ProjectsTitle>
 
                         <ProjectsCount>
-                            {projects.length}{" "}
-                            {projects.length === 1
+                            {projectsData.length}{" "}
+                            {projectsData.length === 1
                                 ? translations?.projects.count.singular
                                 : translations?.projects.count.plural}
                         </ProjectsCount>
                     </ProjectsHeader>
 
                     <ProjectsGrid>
-                        {projects.map((project) => (
+                        {sortedProjectsByOrder.map((project) => (
                             <ProjectCard
                                 key={project.slug}
                                 slug={project.slug}

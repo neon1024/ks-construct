@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { getProjectBySlug, projects } from "@/data/projects";
+import { getProjectBySlug, projectsData } from "@/data/projects";
 
 import ProjectClient from "./components/ProjectClient/ProjectClient";
 
@@ -10,7 +10,7 @@ import { getAlternates } from "@/i18n/getAlternates";
 import { Metadata } from "next";
 
 export function generateStaticParams() {
-    return projects.map((project) => ({
+    return projectsData.map((project) => ({
         slug: project.slug,
     }));
 }
