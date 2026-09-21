@@ -67,7 +67,9 @@ export const DetailDescription = styled.p`
 
     color: #666;
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.7;
+
+    white-space: pre-line;
 `;
 
 export const Cover = styled.div`

@@ -122,6 +122,29 @@ export const projects: Project[] = [
             "/images/projects/project-4/after2.jpg",
         ],
     },
+    {
+        slug: "remplacement-toiture-isolation-facade",
+        title: "Remplacement de toiture et isolation de façade",
+        location: "Paris, France",
+        category: "Toiture et isolation",
+        description:
+            "Le confort de nos clients est notre priorité.\n\nDébut d'un nouveau chantier dans le 14ᵉ arrondissement de Paris.\n\nAu programme :\n- Remplacement de la toiture en zinc et en ardoise\n- Isolation de la façade en laine de roche ROCKWOOL\n- Épaisseur de l'isolant : 120 mm\n- Résistance thermique : R = 3,75 m²·K/W\n\nUn projet alliant performance énergétique, qualité des matériaux et soin des finitions pour améliorer durablement le confort du logement.",
+        cover: "/images/projects/project-5/before1.jpg",
+
+        before: ["/images/projects/project-5/before1.jpg"],
+
+        progress: [
+            "/images/projects/project-5/progress1.jpg",
+            "/videos/projects/project-5/progress2.mp4",
+            "/images/projects/project-5/progress3.jpg",
+            "/images/projects/project-5/progress4.jpg",
+            "/images/projects/project-5/progress5.jpg",
+            "/images/projects/project-5/progress6.jpg",
+            "/images/projects/project-5/progress7.jpg",
+        ],
+
+        after: [],
+    },
 ];
 
 export function getProjectBySlug(slug: string) {
