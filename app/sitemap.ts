@@ -30,5 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: "https://www.ks-construct.fr/projects/installation-climatisation",
             lastModified: new Date(),
         },
+        {
+            url: "https://www.ks-construct.fr/projects/remplacement-toiture-isolation-facade",
+            lastModified: new Date(),
+        },
     ];
 }
